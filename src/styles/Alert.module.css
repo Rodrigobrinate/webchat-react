@@ -1,0 +1,27 @@
+.alert {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    background: red;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 10px;
+    animation-name: teste;
+    transition: 3s ease;
+    animation-duration: 1s;
+  
+
+}
+
+@keyframes teste {
+    0% {
+        transform: translateX(500px);
+        
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+    

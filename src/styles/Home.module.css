@@ -1,0 +1,394 @@
+.left_menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 344px;
+  height: 100%;
+  background-color: #e6e6e6 ;
+  display: flex;
+  flex-direction: column;  
+    padding: 0px 2%;
+ 
+  align-items: center;
+  z-index: 1;
+}
+
+.left_menu h1 {
+  margin-top: 20px;
+    margin-bottom: 30px;
+    align-self: self-start;
+    margin-left: 61px;
+}
+
+.left_menu div:nth-of-type(1) {
+  width: 80%;
+}
+
+.left_menu div:nth-of-type(1) div {
+  position: relative;
+  width:20px;
+  height: 20px;
+  top: 45px;
+  background-image: url(https://img.icons8.com/ios/20/000000/search--v1.png);
+  background-repeat: no-repeat;
+  left: 10px;
+
+}
+
+.lauchMenu {
+  position: relative;
+  top: 12%;
+  z-index: 999;
+  left: 21rem;
+  font-size: 15pt;
+  height: 100%;
+  background: #bfb7b7;
+  width: 0px;
+  cursor: pointer;
+  width: 20px;
+  transition: width 0.3s ease-in-out;
+  background-color: #e6e6e6;
+  height: 20px;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: gray;
+  font-size: 18px;
+}
+
+.container {
+  overflow: hidden;
+  width: 100vw;
+  margin: 0px;
+  height: 100vh;
+}
+
+
+
+/*header' */
+
+/**termina o header */
+
+.converse{
+  height: 100%;
+}
+
+.search {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 1;
+  outline: none;
+  color: black;
+  margin-top: 10px;
+  padding: 10px 50px;
+}
+
+.contacts{
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e6e6;
+  margin-top: 20px;
+  border-radius: 10px;
+  
+}
+
+.contacts div {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+}
+
+.contacts > div button {
+  margin-left: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(240, 109, 109);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contacts ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  
+  align-items: center;
+  padding: 10px;
+  overflow: scroll;
+  max-height: 70vh;
+
+}
+
+.li {
+  height: max-content !important;
+  min-width: 180px;
+
+}
+
+.li img {
+  width: 25px;
+  height: 25px; 
+  margin-right: 0px;
+  border-radius: 50%;
+  
+}
+
+.contacts ul li {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 31px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  /* margin-top: 5px; */
+  border-radius: 5px;
+
+
+}
+.contacts ul li div {
+  display: flex;
+  flex-direction: column;
+margin-left: 10px;
+
+}
+
+.contacts ul li div:nth-of-type(1){
+  width: 60rem;
+}
+
+.numberofnewmessages {
+  background-color: #efa986;
+  color: white;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  /* padding: 1px; */
+  align-items: center;
+  font-size: 7pt;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.contacts ul li div p{
+  font-size: 11px;
+}
+
+.contacts ul li > p {
+  width: max-content;
+  height: max-content;
+  font-size: 9pt;
+  margin-right: -26px;
+  margin-top: -25px;
+}
+
+.contacts ul li img {
+  border-radius: 50%;
+    /* width: 100px; */
+    width: 24px;
+    margin-left: -20px !important;
+    margin-right: 5px !important;
+    height: 24px;
+    margin-top: -10px;
+    border: 1px solid;
+
+}
+
+.contacts h4 {
+  display: flex;
+flex-wrap: nowrap;
+width: max-content;
+}
+
+
+
+.talk {
+  position: absolute;
+  right: 7vw;
+  top: -25px;
+  width: 56vw;
+  height: 100%;
+  padding: 20px;
+  
+}
+
+.talk_header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  height: 15%;
+  background-color: #e6e6e6;
+}
+
+.talk_header h4 {
+  font-size: 30pt;
+  font-weight: 700;
+}
+
+.talk_header img {
+  border-radius: 50%;
+  border: 1px solid;
+  width: 4rem;
+}
+
+.form {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form input{
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f7f8f8;
+  color: rgb(0, 0, 0);
+  font-size: 15pt;
+  padding: 10px;
+  outline: none;
+
+}
+
+.form button {
+  width: 15%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4da7e4;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  margin-top: 3.7rem;
+}
+
+
+.talk ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  overflow-y: scroll;
+  max-height: 70vh;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+
+.talk ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.talk ul::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.talk ul li {
+  width: 30%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  margin-top: 5px;
+  text-align: left;
+  word-break: break-all;
+  
+  position: relative;
+  margin-left: 20px;
+
+}
+
+
+
+.talk ul li img{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+
+  .contacts div {
+    display: block;
+    
+  }
+
+  .talk_header h4 {
+    font-size: 20pt;
+  }
+
+  .talk_header img {
+    width: 3rem;
+    height: 3rem;
+   
+  }
+
+  .contacts div button {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  
+}
+
+@media only screen and (max-width: 850px) {
+  .talk {
+    position: absolute;
+    right: 8px;
+    top: -25px;
+    width: 60vw;
+    height: 100%;
+    padding: 20px;
+}
+  
+}
+
+@media only screen and (max-width:700px) {
+  .talk {
+    width: 50vw;
+    right:38px;
+  }
+}
+
+@media only screen and (max-width:700px) {
+  .left_menu {
+    display: none;
+  }
+
+  .talk_header h4 {
+    font-size: 15pt;
+
+  }
+  .talk {
+    width: 90vw;
+    right:18px;
+  }
+}
