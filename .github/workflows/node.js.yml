@@ -21,7 +21,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
         mongodb-version: [4.2]
 
     steps:
@@ -46,3 +46,5 @@ jobs:
         heroku_app_name: "peaceful-plateau-04699"
         heroku_email: "waldemarnt@gmail.com"
         buildpack: "https://github.com/zidizei/heroku-buildpack-tsc#v2.0"
+        # set buildpacks
+        
