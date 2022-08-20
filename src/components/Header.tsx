@@ -26,7 +26,7 @@
               <li><a href="social">Rede social</a></li>
               </ul>
               </div>
-            <div>{cookies.name.split(" ",1 ) || 'faze login'}&nbsp;<img onClick={()=>{logout()}} src="https://img.icons8.com/fluency-systems-regular/20/000000/exit.png"/></div>
+            <div>{cookies?.name?.split(" ",1 ) || 'faze login'}&nbsp;<img onClick={()=>{logout()}} src="https://img.icons8.com/fluency-systems-regular/20/000000/exit.png"/></div>
           </header>
             </div>
         )
