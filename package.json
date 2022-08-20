@@ -7,7 +7,7 @@
   },
   "type": "module",
   "scripts": {
-    "start": "vite build && node ./index.cjs",
+    "start": "vite build && vite preview",
     "dev": "vite",
     "build": "vite build --config vite.config.js",
     "build:lib": "vite build --config vite-lib.config.js",
