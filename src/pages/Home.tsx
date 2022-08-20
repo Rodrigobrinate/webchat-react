@@ -12,9 +12,10 @@ import ContactContext from "../context/ContactContext";
 import Alert from "../components/Alert";
 import AlertContext from "../context/AlertContext";
 import Header from "../components/Header";
-import { env } from "process";
+
 //const socket = io("http://localhost:3001"); 
-const socket = io(env.SERVER_HOST || "http://localhost:3001");
+const socket = io(import.meta.env.SERVER_HOST || "http://localhost:3001");
+
 
 socket.on("connection", () => {
   console.log("connected");
