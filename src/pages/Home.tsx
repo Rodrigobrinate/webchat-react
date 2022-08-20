@@ -13,8 +13,8 @@ import Alert from "../components/Alert";
 import AlertContext from "../context/AlertContext";
 import Header from "../components/Header";
 
-const socket = io("http://localhost:3001"); 
-//const socket = io("https://chat-in-realitime.herokuapp.com");
+//const socket = io("http://localhost:3001"); 
+const socket = io("process.env.SERVER_HOST");
 
 socket.on("connection", () => {
   console.log("connected");
