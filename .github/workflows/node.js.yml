@@ -22,7 +22,6 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
-        mongodb-version: [4.2]
 
     steps:
     - uses: actions/checkout@v2
@@ -43,7 +42,7 @@ jobs:
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "teste-6245"
+        heroku_app_name: "chat-in-realitime"
         heroku_email: "rodrigobrinate32@gmail.com"
         # set buildpacks
         
