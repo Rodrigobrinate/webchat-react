@@ -13,13 +13,13 @@ import Alert from "../components/Alert";
 import AlertContext from "../context/AlertContext";
 import Header from "../components/Header";
 
+
 //const socket = io("http://localhost:3001"); 
-const socket = io(import.meta.env.API_HOST as string);
+const socket = io(import.meta.env.VITE_API_HOST || "teste");
+console.log(import.meta.env);
 
 
-socket.on("connection", () => {
-  console.log("connected");
-});
+
 
 type User1Id = {
   id?: number;
@@ -68,6 +68,10 @@ function Home() {
     if (!cookies.token) {
       window.location.href = "/Login";
     }
+    
+    socket.on("connection", () => {
+  console.log("connected");
+});
   }, []);  
 
   /// busca os usuarios do chat

@@ -5,5 +5,5 @@ let Api
 export default  Api = axios.create({ 
       //  baseURL: "http://localhost:3001",
         //baseURL: "https://chat-in-realitime.herokuapp.com"
-        baseURL: process.env.API_HOST
+        baseURL: import.meta.env.VITE_API_HOST
       });
