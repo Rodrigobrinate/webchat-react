@@ -14,7 +14,7 @@ import AlertContext from "../context/AlertContext";
 import Header from "../components/Header";
 
 //const socket = io("http://localhost:3001"); 
-const socket = io(import.meta.env.SERVER_HOST as string);
+const socket = io(import.meta.env.API_HOST as string);
 
 
 socket.on("connection", () => {
