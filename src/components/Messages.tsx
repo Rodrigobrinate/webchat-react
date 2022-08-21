@@ -22,6 +22,7 @@ export default function Messages({
   const isLastVisible = isVisible(lastRef2.current);
   const [name, setName] = useState("");
 
+
   const {setContact, setConversation, conversation} = useContext(MessageContext) as any;
 
   useEffect(() => {
@@ -130,7 +131,7 @@ export default function Messages({
         item.toId == cookies.user_id ? (
           <li key={index} className={`${styles.li} right`}>
             <img src={
-                    "http://localhost:3001/static/profile/" +
+                     `${import.meta.env.VITE_API_HOST}/static/profile/` +
                     item.conversation.user2.profile_image
                   } alt={JSON.stringify(item.conversation.user2.profile_image)} />
             {item.text}
@@ -138,7 +139,7 @@ export default function Messages({
         ) : (
           <li key={item.id} className={`${styles.li} left`}>
             <img src={
-                    "http://localhost:3001/static/profile/" +
+                    `${import.meta.env.VITE_API_HOST}/static/profile/` +
                     item.conversation.user1.profile_image
                   } alt="" />
             {item.text}

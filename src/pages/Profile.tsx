@@ -63,7 +63,7 @@ export default function Profile() {
             <label htmlFor="background-img">
               <img
                 src={
-                    "http://localhost:3001/static/profile/" +
+                  `${import.meta.env.VITE_API_HOST}/static/profile/` +
                     cookies.background_image
                   }
                 alt=""
@@ -83,7 +83,7 @@ export default function Profile() {
             <label htmlFor="profile-img">
               <img
                 src={
-                  "http://localhost:3001/static/profile/" +
+                  `${import.meta.env.VITE_API_HOST}/static/profile/` +
                   cookies.profile_image
                 }
                 alt=""
