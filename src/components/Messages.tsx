@@ -53,7 +53,11 @@ export default function Messages({
 
         ///seta o scroll para a posição que estava antes de concatenar as mensagens
         window.setTimeout(() => {
-          lastRef.current?.scrollTo(0, lastRef.current?.scrollHeight - sch);
+          //lastRef.current?.scrollTo(0, lastRef.current?.scrollHeight - sch);
+          lastRef.current?.scrollTo({
+            top: lastRef.current?.scrollHeight - sch,
+            behavior: "smooth",
+          })
         }, 100);
       });
     }
@@ -77,7 +81,10 @@ export default function Messages({
           if (res.data.conversation){
             setConversation(res.data.conversation);
             Api.get(`/message/${res.data.conversation?.id}/${1}`, headers).then((res) => {
-              lastRef.current?.scrollTo(0, lastRef.current?.scrollHeight)
+              lastRef.current?.scrollTo({
+                top: lastRef.current?.scrollHeight,
+                behavior: "smooth",
+              })
 
               /// selciona a sala que quer escutar
               socket.emit(
@@ -93,7 +100,10 @@ export default function Messages({
        })
     } else {
       Api.get(`/message/${conversationId}/${page}`, headers).then((res) => {
-        lastRef.current?.scrollTo(0, lastRef.current?.scrollHeight)
+        lastRef.current?.scrollTo({
+          top: lastRef.current?.scrollHeight,
+          behavior: "smooth",
+        })
         /// selciona a sala que quer escutar
         socket.emit(
           "select_room",
@@ -121,11 +131,16 @@ export default function Messages({
     setName(contact.name);
   }, []);
 
+  function viewMore(){
+    lastRef2.current.classList.remove("none")
+  }
+
   return (
     <>
 
 <ul id="ul" ref={lastRef}>
-        <div ref={lastRef2} >não hà mensagens anteriores</div>
+        <div ref={lastRef2} className="none" >não hà mensagens anteriores</div>
+        <button onClick={viewMore}>ver mensagens anteriores</button>
         
       {message?.map((item: any, index:any) =>
         item.toId == cookies.user_id ? (
@@ -146,6 +161,7 @@ export default function Messages({
           </li>
         )
       )}
+     
         </ul>
     </>
   );

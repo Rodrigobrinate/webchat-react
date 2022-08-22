@@ -141,8 +141,8 @@ function Home() {
             createdAt: lastMessage?.data?.message?.createdAt || "",
           } as Message
         
-          console.log(lastMessage.data.numberofnewmessages);
-          console.log(conversation)
+          //console.log(lastMessage.data.numberofnewmessages);
+         // console.log(conversation)
           a.push(<Contact 
             key={index} 
             conversation={conversation}  
@@ -208,7 +208,7 @@ function Home() {
 
 
  socket.on("newMessage", (data: any) => {
-  console.log(data);
+  //console.log(data);
   getAllConversations();
 
  })
@@ -230,9 +230,10 @@ function Home() {
         };
 
         Api.post("/message/create", body, headers).then((response) => {
-          setTimeout(() => {
           setMessage(<Messages conversation={conversation} contact={contact} page={1}  conversationId={res.data.conversation.id} socket={socket}   />)
-            lastRef.current?.scrollTo(0, lastRef.current?.scrollHeight)
+           
+          setTimeout(() => {
+           lastRef.current?.scrollTo(0, lastRef.current?.scrollHeight)
           }, 100);  
   });
 
@@ -350,7 +351,7 @@ function Home() {
             }}
           />
           <button id="send" onClick={sendMessageh}>
-            Send
+          <img src="https://img.icons8.com/ios-glyphs/60/22C3E6/filled-sent.png"/>
           </button>
 
           {alert}

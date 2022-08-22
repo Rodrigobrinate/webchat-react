@@ -55,7 +55,7 @@ console.log("contato")
                         //?   setMessage(<Messages contact={contact} conversation={null} page={1} conversationId={null} socket={socket}   />)
                         ?   testes('contact')
                          // ? newMessage(contact, 1) 
-                         :   testes('message')
+                         :   testes('message'); window.location.href = "#endMessages"
                           //: setMessage(<Messages contact={contact} page={1} conversation={conversation} conversationId={conversation.id} socket={socket}   />)
                          //: console.log(contacts,);
                       }}
